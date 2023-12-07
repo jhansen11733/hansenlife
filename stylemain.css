@@ -1,11 +1,14 @@
 body{
-    /* background-image: url(Background1.jpg);
-    background-repeat: repeat-y;
-    background-size: cover;*/
+
     background-color: rgb(142, 205, 224);
     margin:auto;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
+}
+hr{
+    color: black;
+    border: 1px solid black;
+
 }
 header {
     border-left: 3px solid black;
@@ -15,6 +18,13 @@ header {
     border-top-right-radius: 35%;
     text-align: center;
     
+}
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px; 
+    padding-right: 25px;
+    justify-content: center;
 }
 .navbar{
     list-style: none;
@@ -30,16 +40,14 @@ a {
 }
 
 main {
-    border: 3px solid black;
+    border: 3px solid;
     text-align: center;
-    padding: 3px;
 }
 .container-1{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     gap: 5px;
-    border: 3px solid;
     padding: 10px;
 }
 .name-1, .name-2, .name-3 {
@@ -75,15 +83,7 @@ main {
 .contact-page{
     background-color: rgb(142, 205, 224);
 }
-.navbar-contact{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    justify-content: space-evenly;
-    font-weight: 700;
-    height: max-content;
-}
+
 .about {
     margin: auto;
     padding: 10px;
@@ -101,20 +101,35 @@ main {
 .container-2 {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    border: 3px solid black;
-    padding: 10px;
+    grid-template-columns:  2fr 3fr 3fr 1fr;
+    border-right: 3px solid black;
+    border-left:  3px solid black;
+    border-bottom:  3px solid black;
+    border-top: 2px solid black;
+    justify-content: center;
 
 }
 .about-me {
-    grid-column: 1/-1;
-    
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    border-left:3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    padding-left: 5%;
+    padding-right: 5%;
+
 }
 .table-img{
     grid-column: 2/3;
+    padding-bottom: 5%;
+    padding-top: 5% ;
 }
 .hike-img{
     grid-column: 3/4;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
 }
 .projects {
     margin: auto;
@@ -134,16 +149,21 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2vw;
-    border: 3px solid black;
+    border-right: 3px solid black;
+    border-left:  3px solid black;
+    border-bottom:  3px solid black;
+    border-top: 2px solid black;
     padding: 2vw;
+    padding-left: 8%;
     box-sizing: border-box;
 }
 .blurb {
-    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
-    
-    border-bottom: 2px solid black;
-    padding-bottom: 4vh;
+    border-right: 3px solid black;
+    border-left:  3px solid black;
+    border-top:3px solid black;
 
 }
 .boat, .taj, .roof, .cave, .cliff, .eiffel {
@@ -181,3 +201,70 @@ h3 {
     height: 74%;
     object-fit: cover;
 }
+@media only screen and (max-width: 850px) {
+    .container-1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 5px;
+        border: 3px solid;
+        padding: 10px;
+        justify-content: center;
+         text-align: center;
+    }
+    .name-1, .name-2, .name-3 {
+        text-align: center;
+    }
+    .img-1, .img-2, .img-3 { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: auto;}
+    .name-1 {
+        grid-row:1;
+        grid-column: 2;
+     }
+    .name-2 {
+        grid-row:3;
+        grid-column: 2;
+     }
+    .name-3 {
+        grid-row:5;
+        grid-column: 2;
+     }
+    .img-1 {
+        grid-row:2;
+        grid-column: 2;
+    }
+    .img-2 {
+        grid-row:4;
+        grid-column: 2;
+    }
+    .img-3 {
+        grid-row:6;
+        grid-column: 2;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .navbar {
+        display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    .hike-img, .table-img{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: auto;}
+    .container-3{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+
+    }
+  }
